@@ -196,7 +196,10 @@ import { Component, ViewEncapsulation } from '@angular/core';
 export class AppComponent { } 
 ```
 
-You include the **app.component.scss**, **app.component.less** or **app.component.css** in your **styleUrls** object of your component.
+You include the **app.component.scss**, **app.component.less** and/or **app.component.css** in your **styleUrls** object of your component.
+CSS, SASS and LESS can co-exist in an application. If you would like to use only one technique like f.e. SASS, you should remove the references
+to the unneeded styleUrls.
+
 The principle for CSS is the same as for SASS files. When using **npm start** or when creating the build with **npm run build**, the SASS 
 content will be dynamically replaced with the corresponding CSS.
 
