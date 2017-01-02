@@ -255,7 +255,7 @@ All commands have to be started in a terminal (like the DOS prompt or Linux term
 
 ### start ###
 Starting the application. It will also start a internal web server (webpack-dev-server) and a watch on any changes. The port is set 
-to **1841**, but you can change that in the script **start** property within the **packages.json** file.
+to **1841**, but you can change that in the script **start** property within the **package.json** file.
 
 When you don't change anything before the npm install, then the browser should look like the image shown at the top of this README.
 
