@@ -117,7 +117,7 @@ development:
 ```
 npm run build development  
 ```
-###config
+### config
 In this folder are the configs for Karma, Webpack and the lite-server.
 It has been placed into folders that fitt to their purpose.
 
