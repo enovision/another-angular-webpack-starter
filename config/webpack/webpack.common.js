@@ -11,7 +11,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['', '.ts', '.js']
+    extensions: ['', '.ts', '.js', 'html', 'json', 'css', 'less', 'scss']
   },
 
   module: {
@@ -34,8 +34,12 @@ module.exports = {
       loader: 'raw'
     }, {
       test: /\.scss$/,
-      exclude: /node_modules/,
-      loaders: ['raw-loader', 'sass-loader'] 
+      exclude: helpers.root('src', 'app', 'assets/less', 'public/less'),
+      loaders: ['raw-loader', 'sass-loader']
+    }, {
+      test: /\.less$/,
+      exclude: helpers.root('src', 'app', 'assets/scss', 'public/scss'),
+      loaders: ['raw-loader', 'less-loader']  
     }]
   },
 

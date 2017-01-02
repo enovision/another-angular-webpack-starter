@@ -6,21 +6,31 @@ module.exports = function (config) {
 
     frameworks: ['jasmine'],
 
-    files: [
-      {pattern: './config/karma/karma-test-shim.js', watched: false}
-    ],
+    files: [{
+      pattern: './config/karma/karma-test-shim.js',
+      watched: false
+    }],
 
     preprocessors: {
       './config/karma/karma-test-shim.js': ['webpack', 'sourcemap'],
-      'src/**/*.scss|': ['scss'],
-      'assets/**/*.scss|': ['scss'],
-      'public/**/*.scss|': ['scss']
+      'assets/scss/**/*.scss|': ['scss'],
+      'public/scss/**/*.scss|': ['scss'],
+      'assets/less/**/*.less|': ['less'],
+      'public/less/**/*.less|': ['less']
     },
 
     scssPreprocessor: {
       options: {
         sourceMap: true,
         includePaths: ['bower_components']
+      }
+    },
+
+    lessPreprocessor: {
+      options: {
+        paths: ['assets/less', 'public/less'],
+        save: true,
+        rootpath: 'assets/images'
       }
     },
 

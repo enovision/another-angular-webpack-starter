@@ -1,6 +1,6 @@
 # Another Angular Webpack Starter
 
-![Another Angular Webpack Starter](preview.jpg "Another Angular Webpack Starter")
+![Another Angular Webpack Starter]( preview.jpg "Another Angular Webpack Starter")
 
 This Angular 2 Webpack based starter has been build upon the official documentation from Angular.io.
 
@@ -29,8 +29,8 @@ Please see our [contributing guidelines](CONTRIBUTING.md) before reporting an is
     - [Quick start](#quick-start)
     - [Guidelines](#guidelines)
         - [app.ts (in root folder)](#appts-in-root-folder)
-        - [How to make SASS work](#how-to-make-sass-work)
-            - [Embedding SASS in components](#embedding-sass-in-components)
+        - [How to make SASS/LESS work](#how-to-make-sassless-work)
+            - [Embedding SASS/LESS in components](#embedding-sassless-in-components)
             - [ViewEncapsulation](#viewencapsulation)
             - [index.html and bootstrapping the app module](#indexhtml-and-bootstrapping-the-app-module)
     - [Installation, start, test and build](#installation-start-test-and-build)
@@ -113,7 +113,7 @@ application.
 
 ## Quick start
 
-> Clone/Download the repo then edit `app.ts` inside [`/src/app/app.ts`](/src/app/app.ts)
+ Clone/Download the repo then edit `app.ts` inside [`/src/app/app.ts`](/src/app/app.ts)
 
 ```bash
 # clone our repo
@@ -148,7 +148,10 @@ module.exports = {
   },
   ...
 ```
-### How to make SASS work ###
+### How to make SASS/LESS work ###
+The instruction below describes the procedure based on **scss** (SASS) files, but the procedure
+is the same for **less** (LESS) files.
+
 Within the **app** folder you will find the file **app.component.scss**. This file contains
 the import of the **scss** files in your assets folder.
 
@@ -159,7 +162,7 @@ the import of the **scss** files in your assets folder.
 
 This file can be used as a dependency in your components (read further).
 
-#### Embedding SASS in components ####
+#### Embedding SASS/LESS in components ####
 ``` javascript
 import { Component, ViewEncapsulation } from '@angular/core';
 
@@ -168,6 +171,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
   templateUrl: './app.component.html',
   encapsulation: ViewEncapsulation.None,
   styleUrls: [
+    './app.component.less', /* <-- LESS */
     './app.component.scss', /* <-- SASS */
     './app.component.css'   /* <-- CSS */ 
   ]
@@ -175,7 +179,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
 export class AppComponent { } 
 ```
 
-You include the **app.component.scss** or **app.component.css** in your **styleUrls** object of your component.
+You include the **app.component.scss**, **app.component.less** or **app.component.css** in your **styleUrls** object of your component.
 The principle for CSS is the same as for SASS files. When using **npm start** or when creating the
 build with **npm run build**, the SASS content will be dynamically replaced with the corresponding CSS.
 

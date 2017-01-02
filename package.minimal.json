@@ -35,7 +35,6 @@
     "@types/node": "^6.0.55",
     "angular2-template-loader": "^0.6.0",
     "awesome-typescript-loader": "^3.0.0-beta.17",
-    "concurrently": "^3.1.0",
     "css-loader": "^0.25.0",
     "css-to-string-loader": "^0.1.2",
     "extract-text-webpack-plugin": "^1.0.1",
@@ -47,12 +46,8 @@
     "karma-jasmine": "^1.1.0",
     "karma-phantomjs-launcher": "^1.0.2",
     "karma-scss-preprocessor": "^2.0.0",
-    "karma-less-preprocessor": "^0.3.3",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^1.8.1",
-    "less": "^2.7.1",
-    "less-loader": "^2.2.3",
-    "lite-server": "^2.2.2",
     "node-sass": "^3.0.0",
     "null-loader": "^0.1.1",
     "phantomjs-prebuilt": "^2.1.14",
@@ -62,12 +57,14 @@
     "rimraf": "^2.5.4",
     "sass-loader": "^4.1.1",
     "style-loader": "^0.13.1",
-    "typedoc": "~0.5.3",
     "typescript": "~2.1.4",
+    "typedoc": "~0.5.3",
     "typings": "^2.1.0",
     "url-loader": "^0.5.7",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2",
-    "webpack-merge": "^2.0.0"
+    "webpack-merge": "^2.0.0",
+    "concurrently": "^3.1.0",
+    "lite-server": "^2.2.2"
   }
 }
