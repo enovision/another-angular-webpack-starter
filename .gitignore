@@ -1,0 +1,4 @@
+/.vscode/
+/build/production/
+/build/development/
+/node_modules/
