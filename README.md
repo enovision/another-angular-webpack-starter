@@ -12,7 +12,7 @@ In this package I have included:
 * LESS
 * Bootstrap
 
-Please see our [contributing guidelines](CONTRIBUTING.md) before reporting an issue.
+Please see [contributing guidelines](CONTRIBUTING.md) before reporting an issue.
 
 ## Table of Contents
 
@@ -135,7 +135,7 @@ application.
 
 ## Quick start
 
- Clone/Download the repo then edit `app.ts` inside [`/src/app/app.ts`](/src/app/app.ts)
+Clone/Download the repo then edit `app.ts` inside [`/src/app/app.ts`](/src/app/app.ts)
 
 ```bash
 # clone our repo
