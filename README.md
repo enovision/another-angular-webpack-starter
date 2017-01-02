@@ -21,6 +21,7 @@ Please see our [contributing guidelines](CONTRIBUTING.md) before reporting an is
 - [Another Angular Webpack Starter](#another-angular-webpack-starter)
     - [Table of Contents](#table-of-contents)
     - [Folder structure](#folder-structure)
+        - [root folder files](#root-folder-files)
         - [assets](#assets)
         - [build](#build)
         - [config](#config)
@@ -51,8 +52,7 @@ Please see our [contributing guidelines](CONTRIBUTING.md) before reporting an is
 ```
 another-angular-webpack-starter/
 +-- package.json
-+-- package.lite.json
-+-- package.sample.json
++-- package.copy.json
 +-- tsconfig.json
 +-- karma.conf.json
 +-- webpack.config.json
@@ -78,6 +78,28 @@ another-angular-webpack-starter/
     +-- polyfills.ts
     +-- vendor.ts
 ```
+
+### root folder files 
+
+>package.json
+
+Contains the dependencies for this package
+
+>package.copy.json
+
+Just a copy of package.json. In case you messed up the original one.
+
+>tsconfig.json
+
+Settings for the typescript handling/transpiler
+
+>webpack.config.js
+
+Imports the webpack.config.js in the folder **/config/webpack**
+
+>karma.conf.js
+
+Imports the karma.config.js in the folder **/config/karma**
 
 ### assets
 In this folder you can place your assets like
