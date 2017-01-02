@@ -118,20 +118,18 @@ development:
 npm run build development  
 ```
 ### config
-In this folder are the configs for Karma, Webpack and the lite-server.
-It has been placed into folders that fitt to their purpose.
+In this folder are the configs for Karma, Webpack and the lite-server. It has been placed into folders that fitt to their purpose.
 
-The helpers.js file contains the function **root** to get the root folder
-and is used in the other configs.
+The helpers.js file contains the function **root** to get the root folder and is used in the other configs.
 
 ### node_modules
 As it says: node modules (npm packages)
-This folder will be generated after you have executed the **npm install** commands
-after cloning this package in your application folder.
+
+This folder will be generated after you have executed the **npm install** commands after cloning this package in your application folder.
 
 ### src
-The most important folder of all. This folder contains the source code of your
-application.
+The most important folder of all. This folder contains the source code of your application. Within this folder you'll find the **app.ts** and
+the folder **app** which should contain your application components and modules.
 
 ## Quick start
 
@@ -158,8 +156,7 @@ go to [http://localhost:1841](http://localhost:1841) in your browser.
 ### app.ts (in root folder) ###
 The **main.ts**  that you see often as the app starter has been replaced with **app.ts**.
 
-If you prefer to have **main.ts** instead of **app.ts** then you can modify the **webpack.common.js**
-file in the **config/webpack** folder (see below).
+If you prefer to have **main.ts** instead of **app.ts** then you can modify the **webpack.common.js** file in the **config/webpack** folder (see below).
 
 ``` javascript
 module.exports = {
@@ -171,11 +168,9 @@ module.exports = {
   ...
 ```
 ### How to make SASS/LESS work ###
-The instruction below describes the procedure based on **scss** (SASS) files, but the procedure
-is the same for **less** (LESS) files.
+The instruction below describes the procedure based on **scss** (SASS) files, but the procedure is the same for **less** (LESS) files.
 
-Within the **app** folder you will find the file **app.component.scss**. This file contains
-the import of the **scss** files in your assets folder.
+Within the **app** folder you will find the file **app.component.scss**. This file contains the import of the **scss** files in your assets folder.
 
 ``` javascript
 @import "../../assets/sass/styles.scss";
@@ -202,25 +197,22 @@ export class AppComponent { }
 ```
 
 You include the **app.component.scss**, **app.component.less** or **app.component.css** in your **styleUrls** object of your component.
-The principle for CSS is the same as for SASS files. When using **npm start** or when creating the
-build with **npm run build**, the SASS content will be dynamically replaced with the corresponding CSS.
+The principle for CSS is the same as for SASS files. When using **npm start** or when creating the build with **npm run build**, the SASS 
+content will be dynamically replaced with the corresponding CSS.
 
 #### ViewEncapsulation ####
-Notice the **ViewEncapsulation** dependency that has been set to **false**. This is important if you have
-styles in your SASS on the **body** HTML tag. If **ViewEncapsulation** is not set to **false** by leaving out
-or setting it to **true** it will not apply the **body** styled CSS because Angular adds an extension to the
-CSS styles to make them unique for the application.
+Notice the **ViewEncapsulation** dependency that has been set to **false**. This is important if you have styles in your SASS on the **body** 
+HTML tag. If **ViewEncapsulation** is not set to **false** by leaving out or setting it to **true** it will not apply the **body** styled CSS 
+because Angular adds an extension to the CSS styles to make them unique for the application.
 
 #### index.html and bootstrapping the app module ####
-In the **index.html** you won't find any references to **css** or **javascript** files. In fact the **index.html**
-is very clean. You can however put additional links to css or javascript files, for it is just a normal
-HTML file.
+In the **index.html** you won't find any references to **css** or **javascript** files. In fact the **index.html** is very clean. 
+You can however put additional links to css or javascript files, for it is just a normal HTML file.
 
-In the **app.module.ts** file the **app.component.ts** is bootstrapped in a **@NgModule**. So the components that
-you are using in your application are more or less bound in this **app.module**.
+In the **app.module.ts** file the **app.component.ts** is bootstrapped in a **@NgModule**. So the components that you are using in your 
+application are more or less bound in this **app.module**.
 
-The module itself is referenced in **app.ts** (src/app folder) at the line
-**platformBrowserDynamic().bootstrapModule(AppModule);**.
+The module itself is referenced in **app.ts** (src/app folder) at the line **platformBrowserDynamic().bootstrapModule(AppModule);**.
 
 ``` javascript
 import { NgModule } from '@angular/core';
@@ -240,10 +232,9 @@ export class AppModule { }
 ```
 
 ## Installation, start, test and build
-In the **package.json** file you'll find the **scripts** section. These are npm scripts that can be
-used during development, testing and building.
+In the **package.json** file you'll find the **scripts** section. These are npm scripts that can be used during development, testing and building.
 
-``` json
+```json
 ...
 "scripts": {
     "start": "webpack-dev-server --inline --progress --port 1841",
@@ -256,16 +247,14 @@ used during development, testing and building.
   ...  
 ```
 
-All commands have to be started in a terminal (like the DOS prompt or Linux terminal) and from
-within the root folder of the application (the folder where this README.md file resides).
+All commands have to be started in a terminal (like the DOS prompt or Linux terminal) and from within the root folder of the application 
+(the folder where this README.md file resides).
 
 ### start ###
-Starting the application. It will also start a internal web server (webpack-dev-server) and a watch
-on any changes. The port is set to **1841**, but you can change that in the script 'start' property
-within the **packages.json** file.
+Starting the application. It will also start a internal web server (webpack-dev-server) and a watch on any changes. The port is set 
+to **1841**, but you can change that in the script **start** property within the **packages.json** file.
 
-When you don't change anything before the npm install, then the browser should look like the image 
-shown at the top of this README.
+When you don't change anything before the npm install, then the browser should look like the image shown at the top of this README.
 
 ```
 <prompt>:\npm start
@@ -292,19 +281,17 @@ Make a development build of the application. The result will be put in the folde
 ```
 
 ### production ###
-This will start a lite-server with the production build as application. This makes it possible to see
-your production build in a test server to do some final analysis. It will also automatically
-start [BrowserSync](https://www.browsersync.io/), what makes it possible to run the application at the
-same time on another device (like an iPad or Android) within your network[1].
+This will start a lite-server with the production build as application. This makes it possible to see your production build in a test 
+server to do some final analysis. It will also automatically start [BrowserSync](https://www.browsersync.io/), which makes it possible 
+to run the application at the same time on another device (like an iPad or Android) within your network[1].
 
 ```
 <prompt>:\npm run production
 ```
 
 ### development ###
-This will start a lite-server with the development build as application. It will also automatically
-start [BrowserSync](https://www.browsersync.io/), what makes it possible to run the application at the
-same time on another device (like an iPad or Android) within your network[1].
+This will start a lite-server with the development build as application. It will also automatically start [BrowserSync](https://www.browsersync.io/), 
+what makes it possible to run the application at the same time on another device (like an iPad or Android) within your network[1].
 
 ```
 <prompt>:\npm run development
@@ -312,15 +299,13 @@ same time on another device (like an iPad or Android) within your network[1].
 
 ### [1] BrowserSync ###
 
-By default BrowserSync is using its own IP-address to start an internal webserver. This can be modified
-by changing the 
+By default BrowserSync is using its own IP-address to start an internal webserver. This can be modified by changing the 
 * lite-server-config.production.js
 * lite-server-config.development.js 
 
 file in the folder **config\lite-server**. 
 
-Add a "host" property with the ip address of your development PC/Laptop. You can also change the
-default port **8000** to a value of your preference.
+Add a "host" property with the ip address of your development PC/Laptop. You can also change the default port **8000** to a value of your preference.
 (see below).
 
 ``` javascript
