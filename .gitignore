@@ -2,3 +2,4 @@
 /build/production/
 /build/development/
 /node_modules/
+*.log*
