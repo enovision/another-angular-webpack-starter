@@ -1,5 +1,6 @@
-Another Angular Webpack Starter
-===============================
+# Another Angular Webpack Starter
+
+![Another Angular Webpack Starter](preview.jpg "Another Angular Webpack Starter")
 
 This Angular 2 Webpack based starter has been build upon the official documentation from Angular.io.
 
@@ -13,8 +14,39 @@ In this package I have included:
 
 Please see our [contributing guidelines](CONTRIBUTING.md) before reporting an issue.
 
-Folder structure
-----------------
+## Table of Contents
+
+<!-- TOC -->
+
+- [Another Angular Webpack Starter](#another-angular-webpack-starter)
+    - [Table of Contents](#table-of-contents)
+    - [Folder structure](#folder-structure)
+        - [assets](#assets)
+        - [build](#build)
+        - [config](#config)
+        - [node_modules](#node_modules)
+        - [src](#src)
+    - [Quick start](#quick-start)
+    - [Guidelines](#guidelines)
+        - [app.ts (in root folder)](#appts-in-root-folder)
+        - [How to make SASS work](#how-to-make-sass-work)
+            - [Embedding SASS in components](#embedding-sass-in-components)
+            - [ViewEncapsulation](#viewencapsulation)
+            - [index.html and bootstrapping the app module](#indexhtml-and-bootstrapping-the-app-module)
+    - [Installation, start, test and build](#installation-start-test-and-build)
+        - [start](#start)
+        - [test](#test)
+        - [build](#build)
+        - [build-development](#build-development)
+        - [production](#production)
+        - [development](#development)
+        - [[1] BrowserSync](#1-browsersync)
+    - [Some usefull npm know-how's](#some-usefull-npm-know-hows)
+    - [Contributing](#contributing)
+
+<!-- /TOC -->
+
+## Folder structure
 
 ```
 another-angular-webpack-starter/
@@ -47,13 +79,11 @@ another-angular-webpack-starter/
     +-- vendor.ts
 ```
 
-assets
-------
+### assets
 In this folder you can place your assets like
 images, css, sass, other javascript and 'vendor' plugins or libs
 
-build
------
+### build
 In this folder the deliveries will be placed that come from:
 
 production:
@@ -65,25 +95,23 @@ development:
 ```
 npm run build development  
 ```
-config
-------
+###config
 In this folder are the configs for Karma, Webpack and the lite-server.
 It has been placed into folders that fitt to their purpose.
 
 The helpers.js file contains the function **root** to get the root folder
 and is used in the other configs.
 
-node_modules
-------------
+### node_modules
 As it says: node modules (npm packages)
+This folder will be generated after you have executed the **npm install** commands
+after cloning this package in your application folder.
 
-src
----
+### src
 The most important folder of all. This folder contains the source code of your
 application.
 
-Quick start
-===========
+## Quick start
 
 > Clone/Download the repo then edit `app.ts` inside [`/src/app/app.ts`](/src/app/app.ts)
 
@@ -103,8 +131,7 @@ $ npm start
 go to [http://localhost:1841](http://localhost:1841) in your browser.
 
 
-Guidelines
-==========
+## Guidelines
 
 ### app.ts (in root folder) ###
 The **main.ts**  that you see often as the app starter has been replaced with **app.ts**.
@@ -186,8 +213,7 @@ import { AppComponent } from './app.component';
 export class AppModule { }
 ```
 
-Starting, testing and building 
-------------------------------
+## Installation, start, test and build
 In the **package.json** file you'll find the **scripts** section. These are npm scripts that can be
 used during development, testing and building.
 
@@ -206,6 +232,8 @@ used during development, testing and building.
 
 All commands have to be started in a terminal (like the DOS prompt or Linux terminal) and from
 within the root folder of the application (the folder where this README.md file resides).
+
+[image:]
 
 ### start ###
 Starting the application. It will also start a internal web server (webpack-dev-server) and a watch
@@ -274,8 +302,8 @@ module.exports = {
   "port": 8000,
 ```
 
-Some usefull npm know-how's
-===========================
+## Some usefull npm know-how's
+
 The following node/npm commands are useful to know:
 
 ``` javascript
@@ -291,6 +319,5 @@ ncu -a
 ncu --upgradeAll
 ```
 
-Contributing
-============
+## Contributing
 See [Contributing](CONTRIBUTING.md) 
