@@ -8,7 +8,9 @@
     "build": "rimraf dist && webpack --config config/webpack/webpack.prod.js --progress --profile --bail",
     "build-development": "webpack --config config//webpack/webpack.development.js --progress --profile --bail",
     "production": "lite-server -c config/lite-server/lite-server-config.production.js",
-    "development": "lite-server -c config/lite-server/lite-server-config.development.js"
+    "development": "lite-server -c config/lite-server/lite-server-config.development.js",
+    "posttest": "node_modules/.bin/remap-istanbul -i coverage/coverage-final.json -o coverage -t html",
+    "coverage": "lite-server -c-1 -o -p 9875 ./coverage"
   },
   "license": "MIT",
   "repository": {
@@ -49,6 +51,8 @@
     "karma-scss-preprocessor": "^2.0.0",
     "karma-less-preprocessor": "^0.3.3",
     "karma-sourcemap-loader": "^0.3.7",
+    "karma-coverage": "^1.1.1",
+    "karma-chrome-launcher": "^2.0.0",
     "karma-webpack": "^1.8.1",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
@@ -57,11 +61,13 @@
     "null-loader": "^0.1.1",
     "phantomjs-prebuilt": "^2.1.14",
     "postcss-loader": "^1.2.1",
+    "reflect-metadata": "^0.1.9",
     "raw-loader": "^0.5.1",
     "resolve-url-loader": "^1.6.1",
     "rimraf": "^2.5.4",
     "sass-loader": "^4.1.1",
     "style-loader": "^0.13.1",
+    "systemjs": "^0.19.41",
     "typedoc": "~0.5.3",
     "typescript": "~2.1.4",
     "typings": "^2.1.0",
